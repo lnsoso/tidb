@@ -1154,7 +1154,7 @@ func (e *UpdateExec) Next() (*Row, error) {
 		_, ok := e.updatedRowKeys[tbl][handle]
 		if ok {
 			// Each matched row is updated once, even if it matches the conditions multiple times.
-			continue
+			// continue
 		}
 		// Update row
 		err1 := updateRecord(e.ctx, handle, oldData, newTableData, flags, tbl, false)
